@@ -2,11 +2,15 @@ const DEV_URL = "http://localhost:3000";
 
 describe("CRUD flow - ui-todo", () => {
   before(() => {
-    cy.visit(DEV_URL);
+    cy.visit(DEV_URL).wait(1000);
 
     // Clean up all todo tasks before running tests
-    cy.get("[data-cy=todo-task__button-delete]").each((deleteButton) => {
-      cy.wrap(deleteButton).click();
+    cy.get("body").then(($body) => {
+      if ($body.find("[data-cy=todo-task__button-delete]").length) {
+        cy.get("[data-cy=todo-task__button-delete]").each(($deleteButton) => {
+          cy.wrap($deleteButton).click();
+        });
+      }
     });
   });
 
