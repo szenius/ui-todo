@@ -29,7 +29,7 @@ yarn test
 ### Run e2e tests
 
 ```
-yarn start           # if you have not already done so
+yarn start:test           # if you have not already done so
 yarn cypress:open
 ```
 
