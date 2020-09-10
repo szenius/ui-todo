@@ -68,12 +68,12 @@ export const TodoList = () => {
     fetchTodos();
   }, [dispatch]);
 
-  const handleUpdateTodo = async (id, description) => {
+  const handleUpdateTodo = (id, description) => {
     firebaseApi.updateTodo(id, description);
     dispatch(updateTodo(id, description));
   }
 
-  const handleDeleteTodo = async (id) => {
+  const handleDeleteTodo = (id) => {
     firebaseApi.deleteTodo(id);
     dispatch(deleteTodo(id));
   }
