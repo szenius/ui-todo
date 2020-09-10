@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Input, Button } from "antd";
 import { TodoContext } from "../context/TodoContextProvider";
 import { deleteTodo, setTodos, updateTodo } from "../context/todo.actions";
-import { firebaseApi } from "../services/firebase-api";
+import { firebaseApi } from "../services/firebaseApi";
 
 const TodoTask = (props) => {
   const [updatedValue, setUpdatedValue] = useState(props.description);

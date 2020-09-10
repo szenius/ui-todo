@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { addTodo } from "../context/todo.actions";
 import { TodoContext } from "../context/TodoContextProvider";
-import { firebaseApi } from "../services/firebase-api";
+import { firebaseApi } from "../services/firebaseApi";
 
 export const TodoInput = () => {
   const [inputValue, setInputValue] = useState("");
